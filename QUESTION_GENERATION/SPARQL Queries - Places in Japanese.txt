@@ -1,0 +1,19 @@
+#Cities in Japanese
+SELECT DISTINCT ?city ?en_label ?ja_label
+WHERE
+{
+   ?city wdt:P31 wd:Q515 .
+   ?city rdfs:label ?ja_label . filter (lang(?ja_label)="ja")
+   ?city rdfs:label ?en_label . filter (lang(?en_label)="en")
+
+}
+
+#Countries in Japanese
+SELECT DISTINCT ?city ?en_label ?ja_label
+WHERE
+{
+   ?city wdt:P31 wd:Q6256 .
+   ?city rdfs:label ?ja_label . filter (lang(?ja_label)="ja")
+   ?city rdfs:label ?en_label . filter (lang(?en_label)="en")
+
+}
